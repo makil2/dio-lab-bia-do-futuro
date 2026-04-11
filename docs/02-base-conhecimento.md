@@ -40,16 +40,10 @@ Existem duas possibilidades, injetar os dados diretamente no prompt (Ctrl + C, C
 import pandas as pd
 import json
 
-# Carregando CSVs
-historico = pd.read_csv('data/historico_atendimento.csv')
-transacoes = pd.read_csv('data/transacoes.csv')
-
-# Carregando JSONs
-with open('data/perfil_investidor.json', 'r', encoding='utf-8') as f:
-    perfil = json.load(f)
-
-with open('data/produtos_financeiros.json', 'r', encoding='utf-8') as f:
-    produtos = json.load(f) 
+perfil = json.load(open('./data/perfil_investidor.json'))
+transacoes = pd.read_csv('./data/transacoes.csv')
+historico = pd.read_csv('./data/historico_atendimentos.csv')
+produtos = json.load(open('./data/produtos_financeiros.json')) 
 ```
 
 ### Como os dados são usados no prompt?
