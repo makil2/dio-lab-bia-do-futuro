@@ -54,7 +54,7 @@ Use com os participantes do teste:
 
 | Métrica | Pergunta | Nota (1-5) |
 |---------|--------------|------------------|
-| Assertividade | "Como respondeu o que foi perguntado?" | ____ |
+| Assertividade | "A resposta respondeu o que foi perguntado?" | ____ |
 | Segurança | "As informações pareceram confiáveis?" | ____ |
 | Coerência | "A linguagem foi clara e fácil de entender?" | _____ |
 
