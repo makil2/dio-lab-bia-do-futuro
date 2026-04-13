@@ -3,7 +3,7 @@
 # Setup do Ollama
 
 ```bash
-# 1. Instalar Ollama (ollama.ai)
+# 1. Instalar Ollama (ollama.com)
 # 2. Baixar um modelo leve
 ollama pull gpt-oss
 
