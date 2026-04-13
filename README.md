@@ -1,149 +1,110 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🎓 João — Educador Financeiro com IA
 
-## Contexto
+Agente conversacional educativo que ensina conceitos de finanças pessoais de forma simples, usando os dados do próprio cliente como exemplos práticos — sem recomendar investimentos.
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+> Projeto desenvolvido como parte do lab **"Bia do Futuro"** da [DIO](https://dio.me).
 
 ---
 
-## O Que Você Deve Entregar
+## 🧩 O Problema
 
-### 1. Documentação do Agente
+Muitas pessoas têm dificuldade em entender conceitos básicos de finanças pessoais: reserva de emergência, tipos de investidores e como organizar os próprios gastos.
 
-Defina **o que** seu agente faz e **como** ele funciona:
+## 💡 A Solução
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+O **João** é um agente educativo que explica finanças de forma acessível, usando linguagem informal e exemplos personalizados — como um professor particular financeiro.
 
 ---
 
-### 2. Base de Conhecimento
+## 🛠️ Tecnologias
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+| Camada | Tecnologia |
+|--------|------------|
+| Interface | [Streamlit](https://streamlit.io) |
+| LLM | [Ollama](https://ollama.com) (local) |
+| Linguagem | Python 3 |
+| Dados | JSON e CSV mockados (`/data`) |
 
 ---
 
-### 3. Prompts do Agente
+## 📁 Estrutura do Projeto
 
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
+```text
+dio-lab-bia-do-futuro/
+├── data/
+│   ├── perfil_investidor.json        # Perfil e metas do cliente
+│   ├── transacoes.csv                # Histórico de transações
+│   ├── historico_atendimento.csv     # Histórico de atendimentos
+│   └── produtos_financeiros.json     # Produtos disponíveis para ensino
+├── docs/
 │   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
+│   ├── 02-base-conhecimento.md       # Estratégia de dados e contexto
+│   ├── 03-prompts.md                 # System prompt e exemplos
+│   ├── 04-metricas.md                # Avaliação e métricas de qualidade
 │   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+├── src/
+│   └── app.py                        # Aplicação principal
+└── README.md
+```
+---
+
+## ▶️ Como Executar
+
+**Pré-requisito:** ter o [Ollama](https://ollama.com) instalado e rodando localmente.
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/makil2/dio-lab-bia-do-futuro.git
+cd dio-lab-bia-do-futuro
+
+# 2. Instale as dependências
+pip install streamlit pandas requests
+
+# 3. Execute a aplicação
+streamlit run src/app.py
 ```
 
 ---
 
-## Dicas Finais
+## 🤖 Persona do Agente
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+- **Nome:** João
+- **Papel:** Educador financeiro
+- **Tom:** Informal, didático e paciente — como um amigo que entende de finanças
+- **Regras principais:**
+  - ✅ Explica como os produtos financeiros funcionam
+  - ✅ Usa os dados do cliente como exemplos práticos
+  - ✅ Admite quando não sabe algo
+  - ❌ Nunca recomenda investimentos específicos
+  - ❌ Nunca responde perguntas fora do escopo financeiro
+
+---
+
+## 🛡️ Estratégias Anti-Alucinação
+
+- Opera apenas com dados fornecidos no contexto
+- Não acessa dados bancários reais
+- Declara explicitamente suas limitações
+- Não substitui profissionais certificados (CFP, CGA etc.)
+
+---
+
+## 📊 Métricas de Qualidade
+
+| Métrica | O que avalia |
+|---------|--------------|
+| Assertividade | A resposta respondeu o que foi perguntado? |
+| Segurança | O agente evitou inventar informações? |
+| Coerência | A linguagem foi clara e adequada ao perfil? |
+
+---
+
+## 📚 Documentação Completa
+
+Toda a documentação está na pasta [`/docs`](./docs), cobrindo arquitetura, base de conhecimento, engenharia de prompts, métricas e roteiro de pitch.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **makil2** · [GitHub](https://github.com/makil2)
