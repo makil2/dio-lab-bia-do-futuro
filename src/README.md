@@ -27,3 +27,8 @@ ollama serve
 # 3. Rodar o app
 streamlit run .\src\app.py
 ```
+
+## Evidência de Execução
+
+<img width="931" height="791" alt="image" src="https://github.com/user-attachments/assets/62651a0d-7c0a-497f-b0d8-8b89bc26dd93" />
+
